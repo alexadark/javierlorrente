@@ -15,8 +15,8 @@ const settings = {
         theme: {
           menu: [
             ["Inicio", "/"],
-            ["SEO", "./seo"],
-            ["Tecnologia", "tecnologia"],
+            ["SEO", "/seo"],
+            ["Tecnologia", "/tecnologia"],
             ["Economia", "/economia/"],
             ["Viajes", "/viajes/"],
             ["Movilidad", "/movilidad/"],
@@ -28,7 +28,7 @@ const settings = {
           },
         },
         source: {
-          categoryBase: "/",
+          categoryBase: ".",
           tagBase: "etiquetas",
         },
       },
