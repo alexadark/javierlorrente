@@ -10,9 +10,11 @@ const Taxonomies = ({ tax, name }) => {
       <span>{name}: </span>
 
       {tax &&
-        tax.map(item => (
+        tax.map((item) => (
           <Button variant={buttonBg} key={item.id} sx={{ mx: 5, mb: 10 }}>
-            <Link link={item.link}>{item.name}</Link>
+            <Link link={item.link} key={item.id} sx={{ mx: 5, mb: 10 }}>
+              {item.name}
+            </Link>
           </Button>
         ))}
     </div>

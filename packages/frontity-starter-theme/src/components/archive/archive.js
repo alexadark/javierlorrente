@@ -23,7 +23,7 @@ const Archive = ({ state, showMedia }) => {
             mb: 30,
           }}
         >
-          {data.taxonomy}: {state.source[data.taxonomy][data.id].name}
+          {state.source[data.taxonomy][data.id].name}
         </h3>
       )}
       {data.isAuthor && (

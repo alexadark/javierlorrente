@@ -23,6 +23,7 @@ const ArchiveItem = ({ item, state, type, showMedia = true }) => {
     excerpt,
   } = formatPostData(state, item);
   const date = new Date(publishDate);
+  let filteredCats = categories.filter((cat) => cat.slug !== "sin-categoria");
 
   return (
     <Container sx={{ maxWidth: "l", mb: "xl" }}>
@@ -55,8 +56,10 @@ const ArchiveItem = ({ item, state, type, showMedia = true }) => {
 
         {postMeta.showOnArchive && (
           <div className="postEntryMeta">
-            <Taxonomies tax={categories} name="Categories" />
-            <Taxonomies tax={tags} name="Tags" />
+            {filteredCats.length > 0 && (
+              <Taxonomies tax={filteredCats} name="Categorias" />
+            )}
+            {tags.length > 0 && <Taxonomies tax={tags} name="Etiquetas" />}
           </div>
         )}
       </article>
