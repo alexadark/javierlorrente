@@ -20,6 +20,7 @@
     "@frontity/twentytwenty-theme": "^1.2.0",
     "@frontity/wp-source": "^1.7.1",
     "frontity": "^1.8.0",
+    "frontity-contact-form-7": "^0.1.4",
     "frontity-starter-theme": "file:packages/frontity-starter-theme"
   }
 }

@@ -7,7 +7,7 @@ const Footer = ({ state }) => {
   return (
     <footer sx={{ variant: "footer" }}>
       <Container>
-        <p>&copy; {new Date().getFullYear()} frontity</p>
+        <p>&copy; {new Date().getFullYear()} Javier Lorente</p>
         {state.theme.showSocialLinks.footer && <SocialShare />}
       </Container>
     </footer>
