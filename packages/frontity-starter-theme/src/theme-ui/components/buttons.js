@@ -6,8 +6,8 @@ const sharedButtonStyles = {
   color: "white",
   cursor: "pointer",
   fontFamily: "body",
-  textTransform: "uppercase",
-  fontSize: "xs",
+  // textTransform: "uppercase",
+  fontSize: "s",
   variant: "transitions.m",
   letterSpacing: 1,
   boxShadow: "medium",
@@ -16,29 +16,31 @@ const sharedButtonStyles = {
   px: "l",
   borderRadius: "50px",
   fontWeight: 500,
+  letterSpacing: 1.6,
 
   "&:hover": {
     transform: "translateY(-5px)",
     boxShadow: "hover",
     a: {
-      color: "white"
-    }
+      color: "white",
+    },
   },
   a: {
     color: "white",
-    textDecoration: "none"
+    textDecoration: "none",
   },
   "&[disabled]": {
     opacity: 0.6,
-    cursor: "not-allowed"
-  }
+    cursor: "not-allowed",
+  },
 };
 
 const small = {
-  py: 4,
+  pt: 6,
+  pb: 4,
   px: "s",
-  fontSize: "xxs",
-  fontWeight: "bold"
+  fontSize: "xs",
+  fontWeight: "bold",
 };
 const outline = {
   ...sharedButtonStyles,
@@ -50,30 +52,30 @@ const outline = {
   boxShadow: "inset 0 0 0 0 currentColor",
   transition: ".3s",
   a: {
-    color: "text"
+    color: "text",
   },
   ":hover:not([disabled])": {
-    boxShadow: "inset 0 0 0 2px currentColor"
-  }
+    boxShadow: "inset 0 0 0 2px currentColor",
+  },
 };
 
 const primary = {
   ...sharedButtonStyles,
-  bg: "primary"
+  bg: "primary",
 };
 
 const secondary = {
   ...sharedButtonStyles,
-  bg: "secondary"
+  bg: "secondary",
 };
 const gradientPrimary = {
-  backgroundImage: t =>
-    `linear-gradient(60deg, ${t.colors.primary},${t.colors.yellow})`
+  backgroundImage: (t) =>
+    `linear-gradient(60deg, ${t.colors.primary},${t.colors.yellow})`,
 };
 
 const gradientSecondary = {
-  backgroundImage: t =>
-    `linear-gradient(60deg, ${t.colors.primary}, ${t.colors.purple} )`
+  backgroundImage: (t) =>
+    `linear-gradient(60deg, ${t.colors.primary}, ${t.colors.purple} )`,
 };
 
 export const buttons = {
@@ -85,13 +87,13 @@ export const buttons = {
       small: {
         ...primary,
         ...gradientPrimary,
-        ...small
-      }
+        ...small,
+      },
     },
     small: {
       ...primary,
-      ...small
-    }
+      ...small,
+    },
   },
   secondary: {
     ...secondary,
@@ -102,35 +104,35 @@ export const buttons = {
       small: {
         ...secondary,
         ...gradientSecondary,
-        ...small
-      }
+        ...small,
+      },
     },
     small: {
       ...secondary,
-      ...small
-    }
+      ...small,
+    },
   },
   outline: {
     ...outline,
     small: {
       ...outline,
-      ...small
-    }
+      ...small,
+    },
   },
   hamburger: {
     pointer: "cursor",
     variant: "transitions.m",
     svg: {
       stroke: "headerColor",
-      variant: "transitions.m"
+      variant: "transitions.m",
     },
 
     bg: "transparent",
     "&:hover svg": {
-      stroke: "headerColorHover"
+      stroke: "headerColorHover",
     },
     "&.btn-menu-opened": {
-      transform: "translate3d(4rem, 0, 0)"
-    }
-  }
+      transform: "translate3d(4rem, 0, 0)",
+    },
+  },
 };
