@@ -13,4 +13,7 @@ export default css`
     color: inherit;
     text-decoration: none;
   }
+  img {
+    max-width: 100%;
+  }
 `;

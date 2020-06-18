@@ -26,9 +26,10 @@ const Post = ({ state, libraries, actions }) => {
     categories,
     tags,
     featured_media,
-    content
+    content,
   } = formatPostData(state, post);
   const date = new Date(publishDate);
+  let filteredCats = categories.filter((cat) => cat.slug !== "sin-categoria");
   /**
    * Once the post has loaded in the DOM, prefetch both the
    * home posts and the list component so if the user visits
@@ -50,7 +51,7 @@ const Post = ({ state, libraries, actions }) => {
             id={featured_media.id}
             ratio={16 / 9}
             sx={{
-              ...featuredStyles
+              ...featuredStyles,
             }}
           />
         )}
@@ -59,7 +60,7 @@ const Post = ({ state, libraries, actions }) => {
             dangerouslySetInnerHTML={{ __html: title }}
             sx={{
               textTransform: "uppercase",
-              fontSize: "xl"
+              fontSize: "xl",
             }}
           />
           {data.isPost && postInfo.showOnPost && (
@@ -71,8 +72,10 @@ const Post = ({ state, libraries, actions }) => {
 
         {data.isPost && postMeta.showOnPost && (
           <div className="postEntryMeta">
-            <Taxonomies tax={categories} name="Categories" />
-            <Taxonomies tax={tags} name="Tags" />
+            {filteredCats.length > 0 && (
+              <Taxonomies tax={filteredCats} name="Categorias" />
+            )}
+            {tags.length > 0 && <Taxonomies tax={tags} name="Etiquetas" />}
           </div>
         )}
       </article>
