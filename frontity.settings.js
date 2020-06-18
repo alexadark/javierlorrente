@@ -15,11 +15,11 @@ const settings = {
         theme: {
           menu: [
             ["Inicio", "/"],
-            ["SEO", "/seo"],
-            ["Tecnologia", "/tecnologia"],
-            ["Economia", "/economia/"],
-            ["Viajes", "/viajes/"],
-            ["Movilidad", "/movilidad/"],
+            ["SEO", "/categorias/seo"],
+            ["Tecnologia", "/categorias/tecnologia"],
+            ["Economia", "/categorias/economia/"],
+            ["Viajes", "/categorias/viajes/"],
+            ["Movilidad", "/categorias/movilidad/"],
             ["Contacto", "/contacto"],
           ],
           featured: {
@@ -28,7 +28,7 @@ const settings = {
           },
         },
         source: {
-          categoryBase: ".",
+          categoryBase: "categorias",
           tagBase: "etiquetas",
         },
       },

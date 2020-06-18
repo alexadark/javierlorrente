@@ -12,7 +12,7 @@ const starterTheme = {
       /**
        * The logo can be a text or an image url
        */
-      logo: "Javier Lorrente",
+      logo: "Frontity",
       // logo:
       //   "https://about.canva.com/en_in/wp-content/uploads/sites/3/2016/08/logos-1.png",
       // logo: Logo,
@@ -22,6 +22,7 @@ const starterTheme = {
       },
       socialLinks: [],
       isMobileMenuOpen: false,
+      isSearchModalOpen: false,
       autoPreFetch: "none",
       featured: {
         showOnArchive: true,
@@ -44,6 +45,12 @@ const starterTheme = {
       },
       closeMobileMenu: ({ state }) => {
         state.theme.isMobileMenuOpen = false;
+      },
+      openSearchModal: ({ state }) => {
+        state.theme.isSearchModalOpen = true;
+      },
+      closeSearchModal: ({ state }) => {
+        state.theme.isSearchModalOpen = false;
       },
     },
   },
