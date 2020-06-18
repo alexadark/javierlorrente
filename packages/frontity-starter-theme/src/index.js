@@ -29,8 +29,8 @@ const starterTheme = {
         showOnPost: true,
       },
       postInfo: {
-        showOnArchive: true,
-        showOnPost: true,
+        showOnArchive: false,
+        showOnPost: false,
       },
       postMeta: {
         showOnArchive: true,

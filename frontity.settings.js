@@ -3,8 +3,8 @@ const settings = {
   state: {
     frontity: {
       url: "https://www.javierlorente.es/",
-      title: "Test Frontity Blog",
-      description: "WordPress installation for Frontity development",
+      title: "Javier Lorente - SEO, inversiones y promos para viajar.",
+      description: "SEO, inversiones y promos para viajar.",
     },
   },
   packages: [
