@@ -38,6 +38,8 @@ const settings = {
       state: {
         source: {
           api: "https://jl.gatsby-wp.com/wp-json",
+          // api: "https://test.frontity.io/wp-json",
+          // api: "http://javierlorrente.wst/wp-json",
         },
       },
     },
