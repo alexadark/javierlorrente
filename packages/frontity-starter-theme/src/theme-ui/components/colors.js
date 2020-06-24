@@ -43,6 +43,7 @@ export const colors = {
   highlightColor: accentDark,
   focusOutline: grey,
   mobileMenuBg: dark,
+  inputBg: light,
   modes: {
     dark: {
       text: light,
@@ -50,7 +51,8 @@ export const colors = {
       cardBg: dark2,
       headerBg: dark3,
       footerBg: dark3,
-      accent: accentDark
-    }
-  }
+      accent: accentDark,
+      inputBg: dark,
+    },
+  },
 };

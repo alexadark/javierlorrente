@@ -37,17 +37,14 @@ const SearchResults = ({ state }) => {
               span: { color: "accent" },
             }}
           >
-            Search For : <span>{`“${reverseFormat(searchQuery)}”`}</span>
+            Resultados para : <span>{`“${reverseFormat(searchQuery)}”`}</span>
           </h1>
           {isEmpty ? (
-            <p>
-              We could not find any results for your search. You can give it
-              another try through the search form below.
-            </p>
+            <p>No pudimos encontrar ningún resultado para su búsqueda.</p>
           ) : (
             <p>
-              We've found {total} {total === 1 ? "result" : "results"} for your
-              search.
+              hemos encontrado {total}{" "}
+              {total === 1 ? "resultado" : "resultados"} para su búsqueda.
             </p>
           )}
         </Container>

@@ -8,6 +8,7 @@ const settings = {
     },
   },
   packages: [
+    "frontity-contact-form-7",
     {
       name: "frontity-starter-theme",
       // name: "@frontity/twentytwenty-theme",

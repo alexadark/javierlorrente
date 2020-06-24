@@ -19,7 +19,7 @@ const Pagination = ({ state, actions, libraries }) => {
   // Get the total posts to be displayed based for the current link
   const { totalPages, next, previous } = getUrlData(state);
   const { route, query } = libraries.source.parse(state.router.link);
-  const isActive = i => state.router.link.includes(i + 1);
+  const isActive = (i) => state.router.link.includes(i + 1);
 
   // Pre-fetch the the next page if it hasn't been fetched yet.
   useEffect(() => {
@@ -34,10 +34,10 @@ const Pagination = ({ state, actions, libraries }) => {
       {/* If there's a previous page, render this link */}
       {previous ? (
         <Link className="prevLink link" link={previous}>
-          <span>Previous</span>
+          <span>Previa</span>
         </Link>
       ) : (
-        <span className="prevLink mutted">Previous</span>
+        <span className="prevLink mutted">Previa</span>
       )}
 
       <Nav direction="row" className="pageNumbers">
@@ -60,10 +60,10 @@ const Pagination = ({ state, actions, libraries }) => {
       {/* If there's a next page, render this link */}
       {next ? (
         <Link className="nextLink link" link={next}>
-          <span>Next</span>
+          <span>Próxima</span>
         </Link>
       ) : (
-        <span className="nextLink mutted">Next</span>
+        <span className="nextLink mutted">Próxima</span>
       )}
     </Container>
   );

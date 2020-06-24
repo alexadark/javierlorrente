@@ -42,6 +42,9 @@ const Theme = ({ state }) => {
           <main
             sx={{
               py: ["xl", "xl", "xxl"],
+              form: {
+                ...formStyle,
+              },
             }}
           >
             <Switch>
@@ -60,3 +63,25 @@ const Theme = ({ state }) => {
 };
 
 export default connect(Theme);
+
+const formStyle = {
+  'input[type="text"],input[type="email"], textarea': {
+    border: "none",
+    height: 50,
+    width: ["100%", "80%"],
+    bg: "inputBg",
+    borderRadius: 5,
+    boxShadow: "default",
+    p: 20,
+    fontSize: "m",
+    color: "text",
+    fontFamily: "body",
+    mb: 15,
+  },
+  textarea: {
+    height: "auto",
+  },
+  'input[type="submit"]': {
+    variant: "buttons.secondary.gradient",
+  },
+};

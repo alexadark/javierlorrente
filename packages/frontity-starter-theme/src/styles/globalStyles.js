@@ -16,4 +16,9 @@ export default css`
   img {
     max-width: 100%;
   }
+  *:focus {
+    outline-style: dashed;
+    outline-width: 1px;
+    outline-color: #ddd;
+  }
 `;
