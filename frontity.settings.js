@@ -1,5 +1,5 @@
 const settings = {
-  name: "javierlorrente",
+  name: "javierlorente",
   state: {
     frontity: {
       url: "https://www.javierlorente.es/",
