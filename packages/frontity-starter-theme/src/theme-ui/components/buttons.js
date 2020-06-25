@@ -16,7 +16,7 @@ const sharedButtonStyles = {
   px: "l",
   borderRadius: "50px",
   fontWeight: 500,
-  letterSpacing: 1.6,
+  // letterSpacing: 1.6,
 
   "&:hover": {
     transform: "translateY(-5px)",
@@ -36,11 +36,12 @@ const sharedButtonStyles = {
 };
 
 const small = {
-  pt: 6,
+  pt: 4,
   pb: 4,
   px: "s",
-  fontSize: "xs",
-  fontWeight: "bold",
+  fontSize: "xxs",
+  fontFamily: "bold",
+  textTransform: "uppercase",
 };
 const outline = {
   ...sharedButtonStyles,

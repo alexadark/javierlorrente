@@ -1,8 +1,9 @@
 import { rem } from "polished";
 
 export const fonts = {
-  body: "khandmedium, sans-serif",
-  heading: "baumansregular, sans-serif"
+  body: "source_sans_proregular, sans-serif",
+  heading: "baumansregular, sans-serif",
+  bold: "source_sans_probold, sans-serif",
 };
 
 export const fontSizes = {
@@ -14,14 +15,14 @@ export const fontSizes = {
   xl: rem("32px"),
   xxl: rem("48px"),
   Big: rem("64px"),
-  Bigger: rem("96px")
+  Bigger: rem("96px"),
 };
 
 export const lineHeights = {
   body: 1.5,
   heading: 1.1,
   loose: 2,
-  none: 1
+  none: 1,
 };
 
 const heading = {
@@ -30,8 +31,8 @@ const heading = {
   fontWeight: "heading",
   color: "text",
   a: {
-    borderBottom: "none"
-  }
+    borderBottom: "none",
+  },
 };
 
 export const a = {
@@ -41,45 +42,48 @@ export const a = {
   textDecoration: "none",
   color: "text",
   "&:hover": {
-    color: "accent"
-  }
+    color: "accent",
+  },
 };
 
 export const p = {
   fontSize: ["m"],
-  lineHeight: "body"
+  lineHeight: "body",
+  strong: {
+    fontFamily: "bold",
+  },
 };
 
 export const h1 = {
   ...heading,
   fontSize: ["xl", "xxl"],
-  mt: "xxs"
+  mt: "xxs",
 };
 export const h2 = {
   ...heading,
   fontSize: ["l", "xl"],
-  mt: "xxs"
+  mt: "xxs",
 };
 
 export const h3 = {
   ...heading,
   fontSize: ["m", "l"],
-  mt: "xs"
+  mt: "xs",
 };
 export const h4 = {
   ...heading,
-  fontSize: ["s", "m"]
+  fontSize: ["s", "m"],
 };
 
 export const h5 = {
   ...heading,
-  fontSize: "xs"
+  fontSize: "xs",
 };
 export const h6 = {
   ...heading,
   fontSize: "xs",
   color: "muted",
-  mb: "xxs"
+  mb: "xxs",
 };
 export const blockquote = {
   fontStyle: "italic",
@@ -89,7 +93,7 @@ export const blockquote = {
   borderLeft: "5px solid",
   borderColor: "primary",
   maxWidth: "800px !important",
-  mx: "auto"
+  mx: "auto",
 };
 
 export const base = {
@@ -104,5 +108,5 @@ export const base = {
   h4,
   h5,
   h6,
-  blockquote
+  blockquote,
 };
