@@ -16,7 +16,14 @@ const Menu = ({ state, direction, ...props }) => {
             link={link}
             className="menu-item"
             aria-current={isCurrentPage ? "page" : undefined}
-            sx={{ fontWeight: 500, "&:focus": { outline: "none" } }}
+            sx={{
+              fontWeight: 500,
+              textTransform: "uppercase",
+              fontSize: "xs",
+              fontFamily: "bold",
+              letterSpacing: 1,
+              "&:focus": { outline: "none" },
+            }}
           >
             {name}
           </Link>
