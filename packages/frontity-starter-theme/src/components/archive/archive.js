@@ -6,10 +6,17 @@ import { connect } from "frontity";
 import ArchiveItem from "./archiveItem";
 import Pagination from "./pagination";
 import { getUrlData } from "../../helpers";
+import { linearGradient } from "polished";
 
 const Archive = ({ state, showMedia }) => {
   const data = getUrlData(state);
   const author = state.source.author[data.id];
+
+  const homeItems = data.items.filter((item) =>
+    state.source.post[item.id].categories.includes(1780)
+  );
+
+  const items = data.isHome ? homeItems : data.items;
 
   return (
     <>
@@ -41,7 +48,8 @@ const Archive = ({ state, showMedia }) => {
           </h3>
         </Flex>
       )}
-      {data.items.map(({ id, type }) => {
+
+      {items.map(({ id, type }) => {
         const item = state.source[type][id];
         return (
           <ArchiveItem

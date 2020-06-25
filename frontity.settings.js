@@ -16,11 +16,11 @@ const settings = {
         theme: {
           menu: [
             ["Inicio", "/"],
-            ["SEO", "/categorias/seo"],
-            ["Tecnologia", "/categorias/tecnologia"],
-            ["Economia", "/categorias/economia/"],
-            ["Viajes", "/categorias/viajes/"],
-            ["Movilidad", "/categorias/movilidad/"],
+            ["SEO", "/c/seo"],
+            ["Tecnologia", "/c/tecnologia"],
+            ["Economia", "/c/economia/"],
+            ["Viajes", "/c/viajes/"],
+            ["Movilidad", "/c/movilidad/"],
             ["Contacto", "/contacto"],
           ],
           featured: {
@@ -29,7 +29,7 @@ const settings = {
           },
         },
         source: {
-          categoryBase: "categorias",
+          categoryBase: "c",
           tagBase: "etiquetas",
         },
       },
@@ -41,6 +41,10 @@ const settings = {
           api: "https://jl.gatsby-wp.com/wp-json",
           // api: "https://test.frontity.io/wp-json",
           // api: "http://javierlorrente.wst/wp-json",
+          params: {
+            per_page: 100,
+            type: ["post", "page"],
+          },
         },
       },
     },
