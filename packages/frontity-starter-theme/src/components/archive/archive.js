@@ -6,7 +6,6 @@ import { connect } from "frontity";
 import ArchiveItem from "./archiveItem";
 import Pagination from "./pagination";
 import { getUrlData } from "../../helpers";
-import { linearGradient } from "polished";
 
 const Archive = ({ state, showMedia }) => {
   const data = getUrlData(state);
