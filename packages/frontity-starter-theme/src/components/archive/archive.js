@@ -1,6 +1,6 @@
 /** @jsx jsx */
-import { jsx, Avatar, Flex, Container } from "theme-ui";
-import React from "react";
+import { jsx, Avatar, Flex } from "theme-ui";
+import React, { useEffect } from "react";
 import { connect } from "frontity";
 
 import ArchiveItem from "./archiveItem";
@@ -16,6 +16,10 @@ const Archive = ({ state, showMedia }) => {
   );
 
   const items = data.isHome ? homeItems : data.items;
+
+  // useEffect(() => {
+  //   actions.source.fetch("/:category", { force: true });
+  // }, []);
 
   return (
     <>

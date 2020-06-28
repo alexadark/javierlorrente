@@ -30,7 +30,7 @@ const settings = {
         },
         source: {
           categoryBase: "c",
-          tagBase: "tags",
+          tagBase: "tag",
         },
       },
     },

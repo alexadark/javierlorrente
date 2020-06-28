@@ -56,10 +56,10 @@ const ArchiveItem = ({ item, state, type, showMedia = true }) => {
 
         {postMeta.showOnArchive && (
           <div className="postEntryMeta">
-            {filteredCats.length > 0 && (
+            {/* {filteredCats.length > 0 && (
               <Taxonomies tax={filteredCats} name="Categorias" />
-            )}
-            {tags.length > 0 && <Taxonomies tax={tags} name="Etiquetas" />}
+            )} */}
+            {tags.length > 0 && <Taxonomies tax={tags} name="Tags" />}
           </div>
         )}
       </article>
