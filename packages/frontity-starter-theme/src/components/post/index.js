@@ -75,7 +75,7 @@ const Post = ({ state, libraries, actions }) => {
             {filteredCats.length > 0 && (
               <Taxonomies tax={filteredCats} name="Categorias" />
             )}
-            {tags.length > 0 && <Taxonomies tax={tags} name="Etiquetas" />}
+            {tags.length > 0 && <Taxonomies tax={tags} name="Tags" />}
           </div>
         )}
       </article>
