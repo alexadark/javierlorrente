@@ -23,7 +23,7 @@ const settings = {
             ["Movilidad", "/c/movilidad/"],
             ["Contacto", "/contacto"],
           ],
-          autoPreFetch: "hover",
+          autoPreFetch: "all",
           featured: {
             showOnList: false,
             showOnPost: false,

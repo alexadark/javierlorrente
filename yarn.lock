@@ -3205,7 +3205,7 @@ frontity-contact-form-7@^0.1.6:
   resolved "https://registry.yarnpkg.com/frontity-contact-form-7/-/frontity-contact-form-7-0.1.6.tgz#f993c5445c8a270084bd10e6167d095453c91d0c"
   integrity sha512-lhN+QdOvQWiUY2npPZK0G4bNNepZEag+XNn5qpvPKzfViwTDtRGj2H3l5QBpoA+cNv87K8F7sTTyoRTc1tKj5A==
 
-"frontity-starter-theme@file:packages/frontity-starter-theme":
+frontity-starter-theme@./packages/frontity-starter-theme:
   version "1.0.0"
   dependencies:
     "@frontity/components" "^1.3.2"

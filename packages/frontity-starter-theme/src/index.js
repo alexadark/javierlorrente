@@ -1,5 +1,6 @@
 import Theme from "./components";
 import image from "@frontity/html2react/processors/image";
+import { allCategoriesHandler, featuredCatHandler } from "./handlers";
 
 const starterTheme = {
   name: "frontity-starter-theme",
@@ -9,6 +10,7 @@ const starterTheme = {
   state: {
     theme: {
       menu: [],
+      autoPreFetch: "hover",
       /**
        * The logo can be a text or an image url
        */
@@ -57,6 +59,9 @@ const starterTheme = {
   libraries: {
     html2react: {
       processors: [image],
+    },
+    source: {
+      handlers: [featuredCatHandler],
     },
   },
 };

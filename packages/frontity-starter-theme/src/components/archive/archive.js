@@ -11,15 +11,7 @@ const Archive = ({ state, showMedia }) => {
   const data = getUrlData(state);
   const author = state.source.author[data.id];
 
-  const homeItems = data.items.filter((item) =>
-    state.source.post[item.id].categories.includes(1780)
-  );
-
-  const items = data.isHome ? homeItems : data.items;
-
-  // useEffect(() => {
-  //   actions.source.fetch("/:category", { force: true });
-  // }, []);
+  const items = data.items;
 
   return (
     <>
@@ -63,7 +55,7 @@ const Archive = ({ state, showMedia }) => {
           />
         );
       })}
-      <Pagination />
+      {/* <Pagination /> */}
     </>
   );
 };
