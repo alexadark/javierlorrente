@@ -1,6 +1,10 @@
 import Theme from "./components";
 import image from "@frontity/html2react/processors/image";
-import { allCategoriesHandler, featuredCatHandler } from "./handlers";
+import {
+  categoriesHandler,
+  featuredCatHandler,
+  allCategoriesHandler,
+} from "./handlers";
 
 const starterTheme = {
   name: "frontity-starter-theme",
@@ -54,6 +58,9 @@ const starterTheme = {
       closeSearchModal: ({ state }) => {
         state.theme.isSearchModalOpen = false;
       },
+      beforeSSR: ({ actions }) => async () => {
+        await actions.source.fetch("all-categories");
+      },
     },
   },
   libraries: {
@@ -61,7 +68,7 @@ const starterTheme = {
       processors: [image],
     },
     source: {
-      handlers: [featuredCatHandler],
+      handlers: [featuredCatHandler, allCategoriesHandler],
     },
   },
 };

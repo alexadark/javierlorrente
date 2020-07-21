@@ -1,2 +1,2 @@
-export * from "./allCategoriesHandler";
 export * from "./featuredCatHandler";
+export * from "./AllCategoriesHandler";

@@ -1,15 +1,35 @@
 /** @jsx jsx */
-import { jsx, Avatar, Flex } from "theme-ui";
+import { jsx, Avatar, Flex, Container } from "theme-ui";
 import React, { useEffect } from "react";
 import { connect } from "frontity";
 
 import ArchiveItem from "./archiveItem";
 import Pagination from "./pagination";
 import { getUrlData } from "../../helpers";
+import { h4 } from "../../theme-ui/components/typo";
 
 const Archive = ({ state, showMedia }) => {
   const data = getUrlData(state);
   const author = state.source.author[data.id];
+  const allCats = state.source.get("all-categories").items;
+  const currentCat = allCats.filter((cat) => cat.link.includes(data.link));
+  const {
+    description,
+    acf: { menuName },
+  } = currentCat[0];
+
+  console.log(
+    "allCats",
+    allCats,
+    "data",
+    data,
+    "currentCat",
+    currentCat,
+    "description",
+    description,
+    "menuName",
+    menuName
+  );
 
   const items = data.items;
 
@@ -28,6 +48,13 @@ const Archive = ({ state, showMedia }) => {
           {state.source[data.taxonomy][data.id].name}
         </h3>
       )}
+
+      {data.taxonomy === "category" && (
+        <Container sx={{ maxWidth: "l", my: 40 }}>
+          <p sx={{ textAlign: "center" }}>{description}</p>
+        </Container>
+      )}
+
       {data.isAuthor && (
         <Flex sx={{ justifyContent: "center", mb: 30 }}>
           <Avatar

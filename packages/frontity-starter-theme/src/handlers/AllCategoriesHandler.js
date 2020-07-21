@@ -1,8 +1,8 @@
 export const allCategoriesHandler = {
   name: "allCategories",
   priority: 10,
-  pattern: "/c/:slug",
-  func: async ({ route, params, state, libraries }) => {
+  pattern: "all-categories",
+  func: async ({ link, params, state, libraries }) => {
     const { api } = libraries.source;
 
     //1.fetch data from the endpoint page
@@ -16,7 +16,7 @@ export const allCategoriesHandler = {
     const items = await response.json();
 
     //3. add data to source
-    const currentPageData = state.source.data[route];
+    const currentPageData = state.source.data[link];
 
     Object.assign(currentPageData, {
       items,
