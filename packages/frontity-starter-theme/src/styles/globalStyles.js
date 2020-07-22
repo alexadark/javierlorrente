@@ -13,7 +13,8 @@ export default css`
     color: inherit;
     text-decoration: none;
   }
-  img {
+  img,
+  iframe {
     max-width: 100%;
   }
   *:focus {
