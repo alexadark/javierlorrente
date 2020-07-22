@@ -22,7 +22,7 @@ export const featuredCatHandler = {
       items,
       link,
       isArchive: true,
-      isPostTypeArchive: true,
+      // isPostTypeArchive: true,
       isFetching: currentPageData.isFetching,
       isReady: currentPageData.isReady,
     };

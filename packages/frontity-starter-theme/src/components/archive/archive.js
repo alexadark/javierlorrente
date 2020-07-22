@@ -4,32 +4,15 @@ import React, { useEffect } from "react";
 import { connect } from "frontity";
 
 import ArchiveItem from "./archiveItem";
-import Pagination from "./pagination";
 import { getUrlData } from "../../helpers";
-import { h4 } from "../../theme-ui/components/typo";
+import Link from "../link";
 
 const Archive = ({ state, showMedia }) => {
   const data = getUrlData(state);
   const author = state.source.author[data.id];
   const allCats = state.source.get("all-categories").items;
   const currentCat = allCats.filter((cat) => cat.link.includes(data.link));
-  const {
-    description,
-    acf: { menuName },
-  } = currentCat[0];
-
-  console.log(
-    "allCats",
-    allCats,
-    "data",
-    data,
-    "currentCat",
-    currentCat,
-    "description",
-    description,
-    "menuName",
-    menuName
-  );
+  const { description } = currentCat[0];
 
   const items = data.items;
 
@@ -48,10 +31,33 @@ const Archive = ({ state, showMedia }) => {
           {state.source[data.taxonomy][data.id].name}
         </h3>
       )}
-
-      {data.taxonomy === "category" && (
+      {!data.isHome && (
         <Container sx={{ maxWidth: "l", my: 40 }}>
           <p sx={{ textAlign: "center" }}>{description}</p>
+          {currentCat[0].acf?.taxMenu && (
+            <Flex
+              as="nav"
+              className="taxMenu"
+              sx={{
+                justifyContent: "center",
+                mt: 50,
+                bg: "cardBg",
+                py: 20,
+                boxShadow: "small",
+                a: { textTransform: "uppercase", fontSize: "xs", px: 15 },
+              }}
+            >
+              {currentCat[0].acf.taxMenu.map((item, i) => {
+                const { url, title } = item.menu_item;
+
+                return (
+                  <Link key={i} link={url}>
+                    {title}
+                  </Link>
+                );
+              })}
+            </Flex>
+          )}
         </Container>
       )}
 
