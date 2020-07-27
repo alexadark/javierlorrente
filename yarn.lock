@@ -3200,10 +3200,10 @@ from2@^2.1.0:
     inherits "^2.0.1"
     readable-stream "^2.0.0"
 
-frontity-contact-form-7@^0.1.6:
-  version "0.1.6"
-  resolved "https://registry.yarnpkg.com/frontity-contact-form-7/-/frontity-contact-form-7-0.1.6.tgz#f993c5445c8a270084bd10e6167d095453c91d0c"
-  integrity sha512-lhN+QdOvQWiUY2npPZK0G4bNNepZEag+XNn5qpvPKzfViwTDtRGj2H3l5QBpoA+cNv87K8F7sTTyoRTc1tKj5A==
+frontity-contact-form-7@^0.1.7:
+  version "0.1.7"
+  resolved "https://registry.yarnpkg.com/frontity-contact-form-7/-/frontity-contact-form-7-0.1.7.tgz#1cd7f804648967a5cee3bef915716eb96792d284"
+  integrity sha512-hlRUSdsgrZGauovljh8nW7t5QwzvzJrhcqQjzbRFbd5IO3bdQ34fNGmlja0YgPR18XNbEm2Jz1aQqSpRLrVqNg==
 
 frontity-starter-theme@./packages/frontity-starter-theme:
   version "1.0.0"
