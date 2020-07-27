@@ -72,9 +72,9 @@ const Post = ({ state, libraries, actions }) => {
 
         {data.isPost && postMeta.showOnPost && (
           <div className="postEntryMeta">
-            {filteredCats.length > 0 && (
+            {/* {filteredCats.length > 0 && (
               <Taxonomies tax={filteredCats} name="Categorias" />
-            )}
+            )} */}
             {tags.length > 0 && <Taxonomies tax={tags} name="Tags" />}
           </div>
         )}

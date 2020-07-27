@@ -39,7 +39,7 @@ const starterTheme = {
         showOnPost: false,
       },
       postMeta: {
-        showOnArchive: true,
+        showOnArchive: false,
         showOnPost: true,
       },
     },

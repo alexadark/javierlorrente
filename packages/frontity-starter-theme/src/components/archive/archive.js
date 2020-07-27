@@ -34,7 +34,7 @@ const Archive = ({ state, showMedia }) => {
       {!data.isHome && (
         <Container sx={{ maxWidth: "l", my: 40 }}>
           <p sx={{ textAlign: "center" }}>{description}</p>
-          {currentCat[0].acf?.taxMenu && (
+          {currentCat[0].acf.taxMenu && (
             <Flex
               as="nav"
               className="taxMenu"
@@ -51,9 +51,13 @@ const Archive = ({ state, showMedia }) => {
                 const { url, title } = item.menu_item;
 
                 return (
-                  <Link key={i} link={url}>
-                    {title}
-                  </Link>
+                  <>
+                    {url && title && (
+                      <Link key={i} link={url}>
+                        {title}
+                      </Link>
+                    )}
+                  </>
                 );
               })}
             </Flex>
