@@ -1102,6 +1102,15 @@
   dependencies:
     ramda "^0.26.1"
 
+"@frontity/head-tags@^1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@frontity/head-tags/-/head-tags-1.0.4.tgz#e52f2e7e7d955f90c1bae74b31272892110c149c"
+  integrity sha512-JiEJnxxCLHfaUXtLpUdTfiHqAMGzc6Ca++/wCfDoJlztAHoznyQW6rMrAbbf93VbOYgTWW5N7GHjZfIAX9XRlg==
+  dependencies:
+    "@frontity/router" "^1.1.1"
+    "@frontity/source" "^1.2.2"
+    frontity "^1.9.0"
+
 "@frontity/hooks@^2.0.2":
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/@frontity/hooks/-/hooks-2.0.2.tgz#7da6e19469c2fd5849f235e81c2f335cc0e81392"

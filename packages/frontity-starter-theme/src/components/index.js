@@ -19,13 +19,16 @@ import { Grommet } from "grommet";
 const Theme = ({ state }) => {
   // Get information about the current URL.
   const data = getUrlData(state);
-  const { isFetching, isPostType, isArchive, isSearch } = data;
+  const metadata = state.headTags.get(state.router.link);
+  const { isFetching, isPostType, isArchive, isSearch, isHome } = data;
+  const title = isHome ? state.frontity.title : metadata[0]?.content;
 
   return (
     <Grommet theme={theme}>
       <ThemeProvider theme={theme}>
         <Title />
         <Head>
+          <title>{title}</title>
           <meta name="description" content={state.frontity.description} />
           <html lang="en" />
         </Head>
