@@ -5,6 +5,7 @@ const settings = {
       url: "https://www.javierlorente.es/",
       title: "Javier Lorente - SEO, inversiones y promos para viajar.",
       description: "SEO, inversiones y promos para viajar.",
+      backend: "https://jl.gatsby-wp.com",
     },
   },
   packages: [
@@ -39,6 +40,8 @@ const settings = {
       name: "@frontity/wp-source",
       state: {
         source: {
+          prefix: "/wp-json",
+          // api: ({ state }) => state.frontity.backend + state.source.prefix,
           api: "https://jl.gatsby-wp.com/wp-json",
           // api: "https://test.frontity.io/wp-json",
           // api: "http://javierlorrente.wst/wp-json",
