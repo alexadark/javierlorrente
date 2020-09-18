@@ -1,7 +1,7 @@
 import Theme from "./components";
 import image from "@frontity/html2react/processors/image";
 import {
-  categoriesHandler,
+  // categoriesHandler,
   featuredCatHandler,
   allCategoriesHandler,
 } from "./handlers";
