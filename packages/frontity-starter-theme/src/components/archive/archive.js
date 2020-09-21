@@ -12,7 +12,6 @@ const Archive = ({ state, showMedia }) => {
   const author = state.source.author[data.id];
   const allCats = state.source.get("all-categories").items;
   const currentCat = allCats.filter((cat) => cat.link.includes(data.link));
-  const { description } = currentCat[0];
 
   const items = data.items;
 
@@ -31,9 +30,9 @@ const Archive = ({ state, showMedia }) => {
           {state.source[data.taxonomy][data.id].name}
         </h3>
       )}
-      {!data.isHome && (
+      {data.isTaxonomy && (
         <Container sx={{ maxWidth: "l", my: 40 }}>
-          <p sx={{ textAlign: "center" }}>{description}</p>
+          <p sx={{ textAlign: "center" }}>{currentCat[0].description}</p>
           {currentCat[0].acf.taxMenu && (
             <Flex
               as="nav"
