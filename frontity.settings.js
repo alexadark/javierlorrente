@@ -47,7 +47,7 @@ const settings = {
           // api: "http://javierlorrente.wst/wp-json",
           params: {
             per_page: 50,
-            type: ["post", "page"],
+            // type: ["post", "page"],
           },
         },
       },
