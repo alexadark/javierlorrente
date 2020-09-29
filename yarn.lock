@@ -1202,7 +1202,15 @@
     "@types/koa" "^2.11.2"
     ts-essentials "^6.0.0"
 
-"@frontity/wp-source@^1.8.4":
+"@frontity/wp-comments@^0.2.3":
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/@frontity/wp-comments/-/wp-comments-0.2.3.tgz#ea027f97a3b8e94cdf6eaa96dedee47511a0374f"
+  integrity sha512-kX63hP3EyNl230gcH895wzpssnL3mRULi9y8urktAdWCfkdRGxawFsMPWpufxC4I8kRlLvmPhTfGBoadi3+aKA==
+  dependencies:
+    "@frontity/wp-source" "^1.8.3"
+    frontity "^1.11.1"
+
+"@frontity/wp-source@^1.8.3", "@frontity/wp-source@^1.8.4":
   version "1.8.4"
   resolved "https://registry.yarnpkg.com/@frontity/wp-source/-/wp-source-1.8.4.tgz#10914dea9a4b162b342e9df6231ea70c2060d9b9"
   integrity sha512-oCW8jdQ2rt6WQKQYQpjooQQfy5vKxOC/xLv/759o6HWGV6SMOQX2Bt5nPmJacSbn0MDCDpPglps17K2BfEIVdg==

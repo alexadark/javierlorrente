@@ -17,6 +17,7 @@
     "@frontity/head-tags": "^1.0.7",
     "@frontity/html2react": "^1.4.0",
     "@frontity/tiny-router": "^1.2.1",
+    "@frontity/wp-comments": "^0.2.3",
     "@frontity/wp-source": "^1.8.4",
     "frontity": "^1.11.1",
     "frontity-contact-form-7": "^0.1.7",

@@ -2,6 +2,7 @@
 import { jsx, Container, Box } from "theme-ui";
 import { useEffect } from "react";
 import { connect } from "frontity";
+import Comments from "../comments";
 
 import { getUrlData } from "../../helpers";
 
@@ -79,6 +80,7 @@ const Post = ({ state, libraries, actions }) => {
           </div>
         )}
       </article>
+      <Comments postId={post.id} />
     </Container>
   ) : null;
 };
