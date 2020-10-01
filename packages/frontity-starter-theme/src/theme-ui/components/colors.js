@@ -24,6 +24,7 @@ export const colors = {
   accentDark,
   yellow,
   purple,
+  light2,
   accent: accentLight,
   background: light,
   bgInverse: dark,
@@ -43,7 +44,7 @@ export const colors = {
   highlightColor: accentDark,
   focusOutline: grey,
   mobileMenuBg: dark,
-  inputBg: light,
+  inputBg: light2,
   modes: {
     dark: {
       text: light,
@@ -52,7 +53,7 @@ export const colors = {
       headerBg: dark3,
       footerBg: dark3,
       accent: accentDark,
-      inputBg: dark,
+      inputBg: dark2,
     },
   },
 };
