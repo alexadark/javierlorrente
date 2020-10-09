@@ -2,7 +2,7 @@ const settings = {
   name: "javierlorente",
   state: {
     frontity: {
-      url: "https://www.javierlorente.es/",
+      url: "https://javierlorrente.vercel.app/",
       title: "Javier Lorente - SEO, inversiones y promos para viajar.",
       description: "SEO, inversiones y promos para viajar.",
       backend: "https://jl.gatsby-wp.com",

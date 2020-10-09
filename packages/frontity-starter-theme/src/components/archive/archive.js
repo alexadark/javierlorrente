@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx, Avatar, Flex, Container } from "theme-ui";
-import React, { useEffect } from "react";
+import React from "react";
 import { connect } from "frontity";
 
 import ArchiveItem from "./archiveItem";
@@ -48,11 +48,13 @@ const Archive = ({ state, showMedia }) => {
             >
               {currentCat[0].acf.taxMenu.map((item, i) => {
                 const { url, title } = item.menu_item;
+                const { backend } = state.frontity;
+                const cleanUrl = url?.replace(backend, "");
 
                 return (
                   <>
                     {url && title && (
-                      <Link key={i} link={url}>
+                      <Link key={i} link={cleanUrl}>
                         {title}
                       </Link>
                     )}
