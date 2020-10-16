@@ -16,7 +16,7 @@ const Header = ({ state }) => {
         <Container className="container">
           <Flex sx={{ alignItems: "center" }}>
             <Logo />
-            <SearchModal sx={{ ml: 10 }} />
+            {/* <SearchModal sx={{ ml: 10 }} /> */}
           </Flex>
           <Flex>
             <Menu
