@@ -50,11 +50,12 @@ const Archive = ({ state, showMedia }) => {
                 const { url, title } = item.menu_item;
                 const { backend } = state.frontity;
                 const cleanUrl = url?.replace(backend, "");
+                console.log("url", cleanUrl);
 
                 return (
                   <>
                     {url && title && (
-                      <Link key={i} link={cleanUrl}>
+                      <Link key={i} link={`/${cleanUrl}`}>
                         {title}
                       </Link>
                     )}
